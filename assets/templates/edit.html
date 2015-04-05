@@ -1,0 +1,26 @@
+<!--Form for the addition of a scratch, Requires: Title, Content. Optional Email option available-->
+	<div class = "form-group">
+		<label for = "scratch_Title">Food Name</label>
+		<input type = "text" class = "form-control" placeholder = "scratch.foodname" ng-model = "scratch.foodname"></input>
+	</div>
+
+	<div class = "form-group">
+		<label for = "scratch_content">Food review</label>
+		<textarea type = "textarea" class = "form-control" placeholder = "scratch.foodreview" ng-model = "scratch.foodreview"></textarea>
+	</div>
+
+
+	<div class = "form-group">
+		<label for = "scratch_content">Food Location</label>
+		<textarea type = "textarea" class = "form-control"placeholder = "scratch.foodlocation" ng-model = "scratch.foodlocation"></textarea>
+	</div>
+
+	<div class = "form-group">
+		<label for = "scratch_content">Food category</label>
+		<textarea type = "textarea" class = "form-control" placeholder = "scratch.foodcategory"  ng-model = "scratch.foodcategory"></textarea>
+	</div>
+
+
+	<div class = "form-group">
+		<button ng-click = "editFood()" type = "submit" class = "btn btn-primary">ADD</button>
+	</div>

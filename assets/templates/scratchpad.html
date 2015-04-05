@@ -1,0 +1,54 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand text-uppercase" href="/">FOOD<span class="label label-success text-capitalize">Free</span></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navigation">
+				<ul class="nav navbar-nav navbar-right">
+						<li><button type="button" class="btn btn-success navbar-btn btn-circle" ui-sref="addScratch" >Add your food</button></li>
+				</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container" style="margin-top:100px;">
+		<!-- Begin of rows -->
+		<div class="row carousel-row" ng-repeat="scratch in scratchpad">
+				<div class="col-xs-8 col-xs-offset-2 slide-row">
+						<div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item active">
+										<img src="http://lorempixel.com/150/150?rand=1" alt="Image">
+								</div>
+							</div>
+						</div>
+						<div class="slide-content">
+								<h4>{{scratch.foodname}}</h4>
+								<p>
+									{{scratch.foodreview}}
+								</p>
+						</div>
+						<div class="slide-footer">
+								<span class="pull-right buttons">
+										<button class="btn btn-sm btn-success" ui-sref = "viewScratch({id:scratch.id})"><i class="fa fa-fw fa-eye"></i>View</button>
+										<button class="btn btn-sm btn-primary" ui-sref="editScratch({id:scratch.id})"><i class="fa fa-fw fa-edit"></i>Edit</button>
+										<button class="btn btn-sm btn-danger" ng-click ="deleteScratch(scratch)"><i class="fa fa-fw fa-times"></i>Delete</button>
+								</span>
+						</div>
+				</div>
+		</div>
+
+</div>
+
+</div>
