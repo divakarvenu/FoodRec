@@ -1,0 +1,158 @@
+<div class="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand text-uppercase" href="#">FOOD<span class="label label-success text-capitalize">Free</span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><button type="button" class="btn btn-success navbar-btn btn-circle"  data-toggle="modal" data-target="#myModal">Sign in</button></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="container">
+          <div class="card card-container">
+              <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+              <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+              <p id="profile-name" class="profile-name-card"></p>
+              <form class="form-signin">
+                  <span id="reauth-email" class="reauth-email"></span>
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="user.signemail" required autofocus>
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="user.signpassword" required>
+                  <div id="remember" class="checkbox">
+                      <label>
+                          <input type="checkbox" value="remember-me"> Remember me
+                      </label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="signIn()" type="submit">Sign in</button>
+              </form><!-- /form -->
+              <a href="#" class="forgot-password">
+                  Forgot the password?
+              </a>
+          </div><!-- /card-container -->
+      </div><!-- /container -->
+    </div>
+  </div>
+
+    <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <div class="content">
+                  <div class="pull-middle">
+                    <h1 class="page-header">DON'T JUST EAT FOOD</h1>
+                    <p class="lead">Share it,Recommend it,Tell your thoughts</p>
+                    <div class="panel panel-default">
+                        <div class="panel-body>
+                            <form action="#" role="form" ng-form='step1form'>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address" ng-model = "user.email" required >
+                                    <span class="input-group-btn">
+                                      <button  ng-disabled="!step1form.$valid" class="btn btn-success btn-circle" ng-click = "addUser()"  type="submit">Sign up for free</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-1 text-center mt-100 mb-100">
+                <div class="phone">
+                    <img class="img-responsive img-rounded" src="http://placemi.com/djlnr/263x480">
+                </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-md-offset-1 text-center mt-100 mb-100">
+                    <div class="phone">
+                        <img class="img-responsive img-rounded" src="http://placemi.com/djlnr/263x480">
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="content">
+                        <div class="pull-middle">
+                            <h2 class="h1 page-header">Discover more about features.</h2>
+                            <ul class="media-list">
+                              <li class="media">
+                                <a class="media-left" href="#">
+                                  <span class="glyphicon glyphicon-cloud icon text-success"></span>
+                                </a>
+                                <div class="media-body">
+                                  <h3 class="media-heading">Know the location</h3>
+                                  <p>Each Food added with a location in it</p>
+                                </div>
+                              </li>
+                              <li class="media">
+                                <a class="media-left" href="#">
+                                  <span class="glyphicon glyphicon-lock icon text-success"></span>
+                                </a>
+                                <div class="media-body">
+                                  <h3 class="media-heading">Know about it</h3>
+                                  <p>categorized</p>
+                                </div>
+                              </li>
+                              <li class="media">
+                                <a class="media-left" href="#">
+                                  <span class="glyphicon glyphicon-user icon text-success"></span>
+                                </a>
+                                <div class="media-body">
+                                  <h3 class="media-heading">Comment</h3>
+                                  <p>Tell your thoughts</p>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-right">
+                    <div class="content">
+                        <div class="pull-middle">
+                            <h4><strong>Describe your Reivew</strong></h4>
+                            <p>The standard and quality of the food you get there is in strike contrast to the service you receive. The Excellent food,lighting and music is however,in my opinion, compensated by irritating service</p>
+                                                    </div>
+                    </div>
+                </div>
+               <div class="col-md-4 col-md-offset-1 mt-100 mb-100">
+                    <div class="phone">
+                        <img class="img-responsive img-rounded" src="http://placemi.com/djlnr/263x480">
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="content">
+                        <div class="pull-middle">
+                            <h4><strong>Even more stuff.</strong></h4>
+                            <p>Advanced search feature</p>
+                            <a class="btn btn-success btn-circle" href="#">Sign up for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
