@@ -7,10 +7,11 @@ foodModule.factory('User', function($resource){
 });
 
 
-foodModule.factory('userEmail', function($resource){
-	return $resource('http://localhost:1337/User/:email', {email:'@email'}, {
+
+foodModule.factory('Login', function($resource){
+	return $resource('http://localhost:1337/User/:email/password/:password', {email:'@email',password:'@password'}, {
 		update: {
-			method:'PUT'
+			method:'POST'
 		}
 	});
 });

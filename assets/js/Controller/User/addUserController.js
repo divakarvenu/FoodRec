@@ -1,4 +1,4 @@
-foodModule.controller('addUserController', function($scope,$state,User,userEmail,localStorageService){
+foodModule.controller('addUserController', function($scope,$state,User,Login,localStorageService){
 
 	$scope.user = new User();
 	$scope.user.password=Math.random().toString(36).substring(7);
@@ -12,9 +12,8 @@ foodModule.controller('addUserController', function($scope,$state,User,userEmail
 		console.log('Sign in function works');
 		console.log($scope.user.signemail);
 		console.log($scope.user.signpassword);
-		$scope.signuser=userEmail.get({id:$scope.user.signemail});
+		$scope.signuser=Login.get({email:$scope.user.signemail,password:$scope.user.signpassword});
 		console.log($scope.signuser);
-
 	}
 
 })
