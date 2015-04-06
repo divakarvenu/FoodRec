@@ -4,7 +4,7 @@ foodModule.controller('addUserController', function($scope,$state,User,userEmail
 	$scope.user.password=Math.random().toString(36).substring(7);
 	$scope.addUser = function() {
 		$scope.user.$save(function () {
-			$state.go('scratchpad');
+			$state.go('Food');
 		});
 		localStorageService.set('user', $scope.user);
 	}

@@ -3,28 +3,28 @@ foodModule.config(function($stateProvider,$httpProvider) {
 
 	$stateProvider.state('home',{
     url:'/home',
-    templateUrl:'templates/food.html',
+    templateUrl:'templates/home.html',
 		controller:'addUserController'
   })
-  .state('scratchpad',{
-		url:'/scratchpad',
-		templateUrl:'templates/scratchpad.html',
-		controller:'scratchListController'
+  .state('Food',{
+		url:'/Food',
+		templateUrl:'templates/food.html',
+		controller:'FoodListController'
 	})
-	.state('addScratch',{
-		url:'/addNewScratch',
-		templateUrl:'templates/addNewScratch.html',
-		controller:'addScratchController'
+	.state('addFood',{
+		url:'/addFood',
+		templateUrl:'templates/addFood.html',
+		controller:'addFoodController'
 	})
-	.state('editScratch',{
-		url:'/scratchpad/:id/edit',
-		templateUrl:'templates/edit.html',
+	.state('editFood',{
+		url:'/editFood/:id/edit',
+		templateUrl:'templates/editFood.html',
 		controller:'editFoodController'
 	})
-	.state('viewScratch',{
-		url:'/scratchpad/:id/view',
-		templateUrl:'templates/viewScratch.html',
-		controller:'viewScratchController'
+	.state('viewFood',{
+		url:'/viewFood/:id/view',
+		templateUrl:'templates/viewFood.html',
+		controller:'viewFoodController'
 	})
 }).run(function($state){
 	$state.go('home');

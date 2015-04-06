@@ -1,4 +1,4 @@
-foodModule.controller('scratchListController', function($scope,$resource,$state,Notes,localStorageService){
+foodModule.controller('FoodListController', function($scope,$resource,$state,$window,Notes,localStorageService){
 
 //  var User=$resource('http://localhost:1337/User/:email', {email:'@email'});
 //  $scope.user=User.get({email:localStorageService.get('user').email});
@@ -6,19 +6,18 @@ foodModule.controller('scratchListController', function($scope,$resource,$state,
  console.log("user details");
 	console.log($scope.user);
 
-	$scope.scratchpad = Notes.query();
-
+	$scope.Fooditem= Notes.query();
 
 
 	 console.log("localstorage");
 	 console.log(localStorageService.get('user'));
 
 
-	$scope.deleteScratch = function (scratch) {
+	$scope.deleteFood = function (Food,element) {
 			if(confirm("Are you sure u want to delete?")) {
-			scratch.$delete(function() {
-        console.log("Delete function")	;				//Single delete
-				$state.go('scratchpad');
+			Food.$delete(function() {
+      console.log(element);
+      angular.element(document.getElementById(element)).remove();
 			});
 			}
 		}

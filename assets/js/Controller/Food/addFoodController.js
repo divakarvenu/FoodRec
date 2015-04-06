@@ -1,11 +1,11 @@
-foodModule.controller('addScratchController', function($scope,$state,Notes){
+foodModule.controller('addFoodController', function($scope,$state,Notes){
 
-	$scope.scratch = new Notes();
+	$scope.Food = new Notes();
 
 	$scope.addFood = function() {
 		console.log("done");
-		$scope.scratch.$save(function () {
-			$state.go('scratchpad');
+		$scope.Food.$save(function () {
+			$state.go('Food');
 		});
 
 	}

@@ -1,4 +1,4 @@
-foodModule.controller('viewScratchController', function($scope,$stateParams,Notes,localStorageService){
+foodModule.controller('viewFoodController', function($scope,$stateParams,Notes,localStorageService){
 
  console.log("localstorage");
  console.log(localStorageService.get('user'));
