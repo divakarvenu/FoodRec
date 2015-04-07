@@ -8,9 +8,13 @@
 module.exports = {
   attributes: {
     name: 'string',
+    password: 'string',
+    email: {
+      type: 'email',
+      unique: true,
+      required: true
+    },
     age: 'integer',
-    email:'string',
-    password:'string',
     location:'string',
     food: {
       collection: 'food',

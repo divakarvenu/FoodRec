@@ -7,12 +7,20 @@
 
 module.exports = {
   attributes: {
-    foodname: 'string',
+    foodname:{
+      type: 'string',
+      unique: true,
+      required: true,
+    },
     foodreview:'string',
-    foodlocatoin:'string',
+    foodlocation:'string',
     foodcategory:'string',
     owner: {
       model: 'user'
+    },
+    Comments: {
+      collection: 'comments',
+      via: 'comment'
     }
   }
 };

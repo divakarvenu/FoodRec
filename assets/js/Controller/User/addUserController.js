@@ -12,8 +12,9 @@ foodModule.controller('addUserController', function($scope,$state,User,Login,loc
 		console.log('Sign in function works');
 		console.log($scope.user.signemail);
 		console.log($scope.user.signpassword);
-		$scope.signuser=Login.get({email:$scope.user.signemail,password:$scope.user.signpassword});
-		console.log($scope.signuser);
+		$scope.signuser=Login.query({email:$scope.user.signemail});
+	  console.log($scope.signuser);
+		console.log($scope.signuser[0]);
 	}
 
 })
