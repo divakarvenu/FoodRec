@@ -11,10 +11,14 @@ foodModule.controller('addUserController', function($scope,$state,User,Login,loc
 	$scope.signIn=function(){
 		console.log('Sign in function works');
 		console.log($scope.user.signemail);
-		console.log($scope.user.signpassword);
-		$scope.signuser=Login.query({email:$scope.user.signemail});
-	  console.log($scope.signuser);
-		console.log($scope.signuser[0]);
+		$scope.signuser=Login.query({email:$scope.user.signemail}).$promise.then(function(todos) {
+			$scope.todos = todos;
+}, function(errResponse) {
+   console.log('error');
+});
+
+	console.log($scope.todos);
+
 	}
 
 })

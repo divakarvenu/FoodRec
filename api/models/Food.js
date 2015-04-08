@@ -15,6 +15,8 @@ module.exports = {
     foodreview:'string',
     foodlocation:'string',
     foodcategory:'string',
+    foodupvote:'string',
+    fooddownvote:'string',
     owner: {
       model: 'user'
     },

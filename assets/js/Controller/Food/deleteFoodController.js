@@ -9,6 +9,8 @@ foodModule.controller('FoodListController', function($scope,$resource,$state,$wi
 	$scope.Fooditem= Notes.query();
 
 
+   console.log($scope.Fooditem);
+
 	 console.log("localstorage");
 	 console.log(localStorageService.get('user'));
 
