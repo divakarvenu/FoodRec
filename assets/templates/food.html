@@ -42,7 +42,7 @@
 						<div class="slide-footer">
 								<span class="pull-right buttons">
 										<button class="btn btn-sm btn-success" ui-sref = "viewFood({id:Food.id})"><i class="fa fa-fw fa-eye"></i>View</button>
-										<button class="btn btn-sm btn-primary" ui-sref="editFood({id:Food.id})"><i class="fa fa-fw fa-edit"></i>Edit</button>
+										<button class="btn btn-sm btn-primary" ng-disabled="check(Food.id)" ui-sref="editFood({id:Food.id})"><i class="fa fa-fw fa-edit"></i>Edit</button>
 										<button class="btn btn-sm btn-danger" ng-click ="deleteFood(Food,Food.id)"><i class="fa fa-fw fa-times"></i>Delete</button>
 								</span>
 						</div>
