@@ -9,10 +9,10 @@
                 </div>
                 <div class="info">
                     <h4 class="text-center">{{scratch.foodname}}</h4>
-                    <p>{{scratch.foodreview}}</p>
+                    <p>Review:{{scratch.foodreview}}</p>
 										<p>Location:{{scratch.foodlocation}}</p>
 										<p>Category:{{scratch.foodcategory}}</p>
-                    <a ui-sref="scratchpad" class="btn">Back</a>
+                    <a ui-sref="scratchpad" class="btn" ui-sref="food">Back</a>
                 </div>
             </div>
         </div>
@@ -20,8 +20,10 @@
 
 
           <div class="row">
-            <span class="fa fa-4x fa-times">{{scratch.foodupvote}}</span>
-            <span class="fa fa-4x fa-check">{{scratch.fooddownvote}}</span>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <span class="fa fa-3x fa-check upvote" ng-click="upvote()">{{scratch.foodupvote}}</span>
+            <span class="fa fa-3x fa-times downvote" ng-click="downvote()">{{scratch.fooddownvote}}</span>
+          </div>
       </div>
 
 </div>

@@ -9,7 +9,7 @@ foodModule.factory('User', function($resource){
 
 
 foodModule.factory('Login', function($resource){
-	return $resource('http://localhost:1337/User/', {email:'@email'}, {
+	return $resource('http://localhost:1337/User/', {}, {
 		'query': {method: 'GET', isArray: true }
 	});
 });

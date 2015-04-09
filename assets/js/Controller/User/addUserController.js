@@ -9,15 +9,18 @@ foodModule.controller('addUserController', function($scope,$state,User,Login,loc
 		localStorageService.set('user', $scope.user);
 	}
 	$scope.signIn=function(){
-		console.log('Sign in function works');
-		console.log($scope.user.signemail);
-		$scope.signuser=Login.query({email:$scope.user.signemail}).$promise.then(function(todos) {
+		$scope.signuser=Login.query({email:$scope.user.signemail},{password:$scope.user.signpassword}).$promise.then(function(todos) {
 			$scope.todos = todos;
-}, function(errResponse) {
-   console.log('error');
+     				if($scope.todos[0]){
+								$state.go('Food');
+							}
+						else{
+									angular.element(document.getElementById('error')).html("Invalid Username/Password");
+							}
+			}, function(errResponse) {
+	angular.element(document.getElementById('error')).html("Invalid Username/Password");
 });
 
-	console.log($scope.todos);
 
 	}
 

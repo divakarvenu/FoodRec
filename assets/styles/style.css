@@ -224,6 +224,7 @@ Image placeholders: placemi.com
 .card-container.card {
     width: 350px;
     padding: 40px 40px;
+    margin-left: 100px;
 }
 
 .btn {
@@ -349,4 +350,28 @@ Image placeholders: placemi.com
 .forgot-password:active,
 .forgot-password:focus{
     color: rgb(12, 97, 33);
+}
+
+/*error class*/
+.error {
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url('error.png');
+text-aligh:center;
+}
+
+/*upvote*/
+
+.downvote{
+  float: right;
+  margin-top: 50px;
+  width: 100px;
+  text-align: center;
+  background-color: #FFC0C0;
+}
+.upvote{
+  margin-top: 50px;
+  width: 100px;
+  text-align: center;
+  background-color: #33AD33;
 }
