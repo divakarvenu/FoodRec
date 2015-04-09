@@ -5,8 +5,9 @@ foodModule.controller('addUserController', function($scope,$state,User,Login,loc
 	$scope.addUser = function() {
 		$scope.user.$save(function () {
 			$state.go('Food');
+			localStorageService.set('user', $scope.user);
 		});
-		localStorageService.set('user', $scope.user);
+
 	}
 	$scope.signIn=function(){
 		$scope.signuser=Login.query({email:$scope.user.signemail},{password:$scope.user.signpassword}).$promise.then(function(todos) {

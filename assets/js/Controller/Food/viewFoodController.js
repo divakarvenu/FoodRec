@@ -8,7 +8,7 @@ foodModule.controller('viewFoodController', function($scope,$stateParams,Notes,l
   $scope.upvote=function(){
     console.log('inside function');
     console.log($scope.scratch.foodupvote);
-    if($scope.scratch.food){
+    if($scope.scratch.foodupvote){
       $scope.scratch.foodupvote=$scope.scratch.foodupvote+1;
    }
    else{
@@ -23,7 +23,7 @@ foodModule.controller('viewFoodController', function($scope,$stateParams,Notes,l
   $scope.downvote=function(){
     console.log('inside function');
     console.log($scope.scratch.fooddownvote);
-    if($scope.scratch.food){
+    if($scope.scratch.fooddownvote){
       $scope.scratch.fooddownvote=$scope.scratch.fooddownvote+1;
    }
    else{
