@@ -1,3 +1,26 @@
+<div class="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand text-uppercase" href="#">FOOD<span class="label label-success text-capitalize">Free</span></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li><button type="button" class="btn btn-success navbar-btn btn-circle" ng-click="logout()" >Logout</button></li>
+
+            </ul>
+        </div>
+      </div>
+    </nav>
+
 
 
 <div class="container" style="margin-left:250px;">
@@ -18,12 +41,36 @@
         </div>
       </div>
 
-
+  <!--
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <span class="fa fa-3x fa-check upvote" ng-click="upvote()">{{scratch.foodupvote}}</span>
-            <span class="fa fa-3x fa-times downvote" ng-click="downvote()">{{scratch.fooddownvote}}</span>
+          <button class="btn btn-sm btn-success fa fa-3x fa-check upvote" ng-click="upvote()"><i ></i>{{scratch.foodupvote}}</button>
+          <button class="btn btn-sm btn-danger fa fa-3x fa-close downvote" ng-click="downvote()"></i>{{scratch.fooddownvote}}</button>
           </div>
-      </div>
+      </div> -->
 
+
+      <div class="commentcontainer">
+        <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="well">
+        <h4>What is on your mind?</h4>
+    <div class="input-group">
+        <input type="text" class="form-control input-sm chat-input" placeholder="Write your message here..." ng-model="scratch.foodcomment"  />
+	    <span class="input-group-btn" ng-click="addComment()">
+            <button class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Comment</button>
+        </span>
+    </div>
+    <hr data-brackets-id="12673">
+    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable" ng-repeat="cmt in comment">
+        <strong class="pull-left primary-font">{{cmt.email}}</strong>
+        <small class="pull-right text-muted">
+           <span class="glyphicon glyphicon-time"></span></small>
+        </br>
+        <li class="ui-state-default">{{cmt.foodcomment}}</li>
+        </br>
+    </ul>
+    </div>
+</div>
+</div>
 </div>

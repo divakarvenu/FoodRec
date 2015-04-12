@@ -5,3 +5,12 @@ foodModule.factory('Notes', function($resource){
 		}
 	});
 });
+
+
+foodModule.factory('Comment', function($resource){
+	return $resource('http://localhost:1337/Comments/:id', {id:'@id'}, {
+		update: {
+			method:'PUT'
+		}
+	});
+});

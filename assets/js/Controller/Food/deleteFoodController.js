@@ -3,22 +3,18 @@ foodModule.controller('FoodListController', function($scope,$resource,$state,Not
 //  var User=$resource('http://localhost:1337/User/:email', {email:'@email'});
 //  $scope.user=User.get({email:localStorageService.get('user').email});
 
- console.log("user details");
-	console.log($scope.user);
-
-	$scope.Fooditem= Notes.query();
 
 
-   console.log($scope.Fooditem);
+	$scope.Fooditem= Notes.query(); //getting all the items
 
-	 console.log("localstorage");
-	 console.log(localStorageService.get('user'));
-
-  $scope.chec=function(value){
-    console.log(value);
-    alert(value);
+//logout function
+  $scope.logout=function(){
+    console.log('logout is working');
+    localStorageService.remove('user');
+    $state.go('home');
   }
 
+//delete function using prompt
 	$scope.deleteFood = function (Food,element) {
 			if(confirm("Are you sure u want to delete?")) {
 			Food.$delete(function() {

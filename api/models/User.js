@@ -20,5 +20,6 @@ module.exports = {
       collection: 'food',
       via: 'owner'
     }
+
   }
 };

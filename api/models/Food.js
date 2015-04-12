@@ -23,6 +23,10 @@ module.exports = {
     Comments: {
       collection: 'comments',
       via: 'comment'
+    },
+    vote:{
+      collection: 'votes',
+      via: 'vote'
     }
   }
 };
