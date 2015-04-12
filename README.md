@@ -7,11 +7,11 @@ To know more about the app and upcoming feature please take a look on this
 
 # How to install
 
-First $npm install
+First `$npm install`
 
-And go to assets folder to run $bower install
+And go to assets folder to run `$bower install`
 
-Then finally $sails lift 
+Then finally `$sails lift`
 
 You are up and running!!
 
