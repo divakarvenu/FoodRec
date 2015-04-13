@@ -26,6 +26,4 @@ var foodModule = angular.module('scratchpad',['ui.router','ngResource','LocalSto
 
 
 
-
-
 /*----------Scratchpad Controllers---------------*/

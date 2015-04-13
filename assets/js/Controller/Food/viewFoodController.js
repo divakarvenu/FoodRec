@@ -1,6 +1,16 @@
 foodModule.controller('viewFoodController', function($scope,$stateParams,Notes,$state,Comment,localStorageService,$window){
 
- var flag;
+
+
+  if(localStorageService.get('user')){
+  	console.log('works');
+    console.log(localStorageService.get('user'));
+  }
+  else{
+  	console.log('nt working');
+  	$state.go('home');
+  }
+
 
 
  console.log("localstorage");
@@ -15,7 +25,6 @@ foodModule.controller('viewFoodController', function($scope,$stateParams,Notes,$
     console.log(todos.owner.id);
     console.log($scope.scratch.owner.id);
     $scope.comment=$scope.scratch.Comments;
-    flag=$scope.scratch;
 
 });
 

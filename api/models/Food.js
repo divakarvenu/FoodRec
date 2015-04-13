@@ -24,9 +24,5 @@ module.exports = {
       collection: 'comments',
       via: 'comment'
     },
-    vote:{
-      collection: 'votes',
-      via: 'vote'
-    }
   }
 };

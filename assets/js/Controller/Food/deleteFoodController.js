@@ -4,6 +4,16 @@ foodModule.controller('FoodListController', function($scope,$resource,$state,Not
 //  $scope.user=User.get({email:localStorageService.get('user').email});
 
 
+if(localStorageService.get('user')){
+	console.log('works');
+	console.log(localStorageService.get('user'));
+}
+else{
+	console.log('nt working');
+	$state.go('home');
+}
+
+
 
 	$scope.Fooditem= Notes.query(); //getting all the items
 
