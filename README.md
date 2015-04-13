@@ -9,8 +9,6 @@ To know more about the app and upcoming feature please take a look on this
 
 First `$npm install`
 
-And go to assets folder to run `$bower install`
-
 Then finally `$sails lift`
 
 You are up and running!!
