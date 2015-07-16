@@ -1,0 +1,183 @@
+{
+  "data": {
+    "comments": [],
+    "food": [],
+    "task": [
+      {
+        "owner": 2,
+        "taskname": "Task 2",
+        "taskdate": "2015-07-07T18:30:00.000Z",
+        "taskpoints": 10,
+        "taskestimation": "10h",
+        "tasksummary": "dfgsg",
+        "taskapproval": "pending",
+        "createdAt": "2015-07-13T15:28:52.718Z",
+        "updatedAt": "2015-07-13T15:38:59.686Z",
+        "id": 3
+      },
+      {
+        "owner": 2,
+        "taskname": "dsfa",
+        "taskdate": "2015-07-30T18:30:00.000Z",
+        "taskpoints": 10,
+        "taskestimation": "10h",
+        "tasksummary": "23sdfafdsafsf",
+        "taskapproval": "pending",
+        "createdAt": "2015-07-13T15:57:54.008Z",
+        "updatedAt": "2015-07-13T15:57:54.008Z",
+        "id": 4
+      }
+    ],
+    "user": [
+      {
+        "name": "divakar",
+        "email": "divakarvenu26@gmail.com",
+        "password": "admin",
+        "role": "admin",
+        "createdAt": "2015-07-11T16:38:11.930Z",
+        "updatedAt": "2015-07-11T16:38:11.930Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "comments": {
+      "foodcomment": {
+        "type": "string"
+      },
+      "comment": {
+        "type": "integer",
+        "model": "food",
+        "foreignKey": true,
+        "alias": "comment"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "food": {
+      "foodname": {
+        "type": "string",
+        "unique": true
+      },
+      "foodreview": {
+        "type": "string"
+      },
+      "foodlocation": {
+        "type": "string"
+      },
+      "foodcategory": {
+        "type": "string"
+      },
+      "foodupvote": {
+        "type": "integer"
+      },
+      "fooddownvote": {
+        "type": "integer"
+      },
+      "owner": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "owner"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "task": {
+      "taskname": {
+        "type": "string",
+        "unique": true
+      },
+      "taskdate": {
+        "type": "datetime"
+      },
+      "taskestimation": {
+        "type": "string"
+      },
+      "taskpoints": {
+        "type": "integer"
+      },
+      "tasksummary": {
+        "type": "string"
+      },
+      "taskapproval": {
+        "type": "string"
+      },
+      "taskowner": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "taskowner"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "name": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "role": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "comments": {},
+    "food": {},
+    "task": {
+      "id": 4
+    },
+    "user": {
+      "id": 2
+    }
+  }
+}

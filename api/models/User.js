@@ -14,12 +14,15 @@ module.exports = {
       unique: true,
       required: true
     },
-    age: 'integer',
-    location:'string',
+    role: 'string',
     food: {
       collection: 'food',
       via: 'owner'
-    }
+    },
+    task:{
+      collection:'task',
+      via:'taskowner'
+    },
 
   }
 };
